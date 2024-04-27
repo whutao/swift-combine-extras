@@ -52,11 +52,11 @@ extension Publishers.Custom {
             self.receiveCompletion = receiveCompletion
         }
         
-        func send(value: Output) {
+        public func send(value: Output) {
             receiveValue(value)
         }
         
-        func send(completion: Subscribers.Completion<Failure>) {
+        public func send(completion: Subscribers.Completion<Failure>) {
             receiveCompletion(completion)
         }
     }
