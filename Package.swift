@@ -3,7 +3,13 @@ import PackageDescription
 
 let package = Package(
     name: "swift-combine-extras",
-    platforms: [.iOS(.v15)],
+    platforms: [
+        .iOS(.v13),
+        .tvOS(.v13),
+        .watchOS(.v6),
+        .macOS(.v10_15),
+        .macCatalyst(.v13)
+    ],
     products: [
         .library(name: "CombineExtras", targets: ["CombineExtras"])
     ],
